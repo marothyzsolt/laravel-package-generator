@@ -1,0 +1,45 @@
+{
+  "name": "marothyzsolt/laravel-package-generator",
+  "description": "Get a package skeleton and all other `make` commands from laravel base for package development.",
+  "type": "package",
+  "license": "MIT",
+  "keywords": [
+    "laravel"
+  ],
+  "authors": [
+    {
+      "name": "Zsolt Marothy",
+      "email": "zsolt@marothy.me"
+    }
+  ],
+  "require": {
+    "illuminate/support": "^7.0|^8.0|^9.0",
+    "illuminate/console": "^7.0|^8.0|^9.0",
+    "illuminate/filesystem": "^7.0|^8.0|^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Marothyzsolt\\LaravelPackageGenerator\\": "./src"
+    }
+  },
+  "minimum-stability": "dev",
+  "autoload-dev": {
+    "psr-4": {
+      "Marothyzsolt\\LaravelPackageGenerator\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Marothyzsolt\\LaravelPackageGenerator\\LaravelPackageMakerServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^5.0|^6.0",
+    "mockery/mockery": "^1.4"
+  }
+}
